@@ -1,0 +1,12 @@
+{
+    "name": "darthsoup/laravel-theme",
+    "description": "Laravel Theme System",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kevin Krummnacker",
+            "email": "kevin.krummnacker@gmail.com"
+        }
+    ],
+    "require": {}
+}
