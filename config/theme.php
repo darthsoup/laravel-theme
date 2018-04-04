@@ -5,10 +5,10 @@ return [
     /*
      * Path to directory with themes
      */
-    'theme_path' => 'resources/themes', // base_path('resources/themes') #todo fix for public release
+    'theme_path' => base_path('resources/themes'),
 
     /*
-     * Path to directory with assets
+     * Path to directory with public assets
      * Remember that the asset path must be located in the public folder
      */
     'assets_path' => 'assets/themes',

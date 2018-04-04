@@ -130,7 +130,6 @@ class ThemeManager
         return $this->theme;
     }
 
-
     /**
      * @param string $asset
      * @return null|string
@@ -240,10 +239,6 @@ class ThemeManager
      */
     public function property($key = null, $default = null)
     {
-        if (null === $key) {
-            return $this->getProperties();
-        }
-
         return Arr::get($this->getProperties(), $key, $default);
     }
 
@@ -254,10 +249,6 @@ class ThemeManager
      */
     public function config($key = null, $default = null)
     {
-        if (null === $key) {
-            return $this->getConfig();
-        }
-
         return Arr::get($this->getConfig(), $key, $default);
     }
 
@@ -274,7 +265,7 @@ class ThemeManager
             throw new ThemeException("Theme ['{$themeName}'] does not exist");
         }
 
-        $this->theme = $this->themesList->get($themeName);
+        $this->theme = $this->get($themeName);
         return $this;
     }
 }

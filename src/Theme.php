@@ -10,7 +10,7 @@ use Illuminate\Support\Collection;
  * Class Theme
  *
  * @author Kevin Krummnacker <kevin.krummnacker@gmail.com>
- * @package Services\Theme
+ * @package DarthSoup\Theme
  */
 class Theme implements Themable
 {

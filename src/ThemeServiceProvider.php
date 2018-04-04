@@ -4,9 +4,9 @@ namespace DarthSoup\Theme;
 
 use DarthSoup\Theme\Console\ListThemes;
 use Illuminate\Support\Facades\Blade;
-use Illuminate\Support\ServiceProvider as BaseServiceProvider;
+use Illuminate\Support\ServiceProvider;
 
-class ServiceProvider extends BaseServiceProvider
+class ThemeServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -15,7 +15,9 @@ class ServiceProvider extends BaseServiceProvider
      */
     public function boot()
     {
-        //$this->app['darthsoup.themes']->register();
+        $this->publishes([
+            dirname(__DIR__).'/config/theme.php' => config_path('theme.php'),
+        ], 'config');
     }
 
     /**
@@ -25,8 +27,7 @@ class ServiceProvider extends BaseServiceProvider
      */
     public function register()
     {
-        $configPath = __DIR__ . '/config/theme.php';
-        $this->mergeConfigFrom($configPath, 'theme');
+        $this->mergeConfigFrom(dirname(__DIR__).'/config/theme.php', 'theme');
 
         $this->registerTheme();
 

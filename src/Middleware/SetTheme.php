@@ -21,7 +21,8 @@ class SetTheme
      */
     public function handle($request, Closure $next)
     {
-        \Theme::activate($brand->slug);
+        $theme->activate($brand->slug);
+        
         return $next($request);
     }
 }
