@@ -18,6 +18,8 @@ class ThemeServiceProvider extends ServiceProvider
         $this->publishes([
             dirname(__DIR__).'/config/theme.php' => config_path('theme.php'),
         ], 'config');
+
+        $this->bootBlade();
     }
 
     /**
@@ -27,11 +29,9 @@ class ThemeServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(dirname(__DIR__).'/config/theme.php', 'theme');
+        $this->mergeConfigFrom(dirname(__DIR__) . '/config/theme.php', 'theme');
 
         $this->registerTheme();
-
-        $this->registerBlade();
 
         $this->registerConsole();
     }
@@ -51,12 +51,12 @@ class ThemeServiceProvider extends ServiceProvider
     }
 
     /**
-     * registerBlade
+     * bootBlade
      */
-    protected function registerBlade()
+    protected function bootBlade()
     {
-        Blade::directive('includeTheme', function ($expression) {
-            return "<?php echo app('darthsoup.themes')->view({$expression}); ?>";
+        $this->app['blade.compiler']->directive('includeTheme', function ($expression) {
+            return "<?= app('darthsoup.themes')->view({$expression}); ?>";
         });
     }
 
