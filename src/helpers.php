@@ -26,7 +26,7 @@ if (! function_exists('asset_theme')) {
 
 if (!function_exists('property_theme')) {
     /**
-     * Get / set the specified configuration value.
+     * Get / set the specified theme property configuration value.
      *
      * If an array is passed as the key, we will assume you want to set an array of values.
      *
@@ -46,7 +46,7 @@ if (!function_exists('property_theme')) {
 
 if (!function_exists('config_theme')) {
     /**
-     * Get / set the specified configuration value.
+     * Get / set the specified theme configuration value.
      *
      * If an array is passed as the key, we will assume you want to set an array of values.
      *

@@ -4,12 +4,6 @@ namespace DarthSoup\Theme\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-/**
- * Class Theme
- *
- * @author Kevin Krummnacker <kevin.krummnacker@gmail.com>
- * @package DarthSoup\Theme\Facade
- */
 class Theme extends Facade
 {
     /**

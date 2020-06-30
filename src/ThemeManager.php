@@ -9,12 +9,6 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\View\Factory as ViewFactory;
 
-/**
- * Class Theme
- *
- * @author Kevin Krummnacker <kevin.krummnacker@gmail.com>
- * @package DarthSoup\Theme
- */
 class ThemeManager
 {
     /**

@@ -4,12 +4,6 @@ namespace DarthSoup\Theme\Contracts;
 
 use Illuminate\Support\Collection;
 
-/**
- * Interface Themable
- *
- * @author Kevin Krummnacker <kevin.krummnacker@gmail.com>
- * @package DarthSoup\Theme\Contracts
- */
 interface Themable
 {
     /**

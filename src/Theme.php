@@ -6,12 +6,6 @@ use DarthSoup\Theme\Contracts\Themable;
 use DarthSoup\Theme\Exceptions\ThemeException;
 use Illuminate\Support\Collection;
 
-/**
- * Class Theme
- *
- * @author Kevin Krummnacker <kevin.krummnacker@gmail.com>
- * @package DarthSoup\Theme
- */
 class Theme implements Themable
 {
     /**

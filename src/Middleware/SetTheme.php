@@ -3,15 +3,20 @@
 namespace DarthSoup\Theme\Middleware;
 
 use Closure;
+use DarthSoup\Theme\Theme;
 
-/**
- * Class SetTheme
- *
- * @author Kevin Krummnacker <kevin.krummnacker@gmail.com>
- * @package Services\Theme\Middleware
- */
 class SetTheme
 {
+    /**
+     * @var DarthSoup\Theme\Theme
+     */
+    protected $theme;
+
+    public function __construct(Theme $theme)
+    {
+        $this->theme = $theme;
+    }
+
     /**
      * Set Theme by request middleware
      *
@@ -21,8 +26,8 @@ class SetTheme
      */
     public function handle($request, Closure $next)
     {
-        $theme->activate($brand->slug);
-        
+        $this->theme->activate('default');
+
         return $next($request);
     }
 }
