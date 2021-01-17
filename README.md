@@ -1,52 +1,27 @@
-## Laravel Theme Package
+# Laravel Theme
 
-A theme system for Laravel 5.2 and above.
+A simple theme system for Laravel.
 
 ## Installation
 
-Install the package through [Composer](http://getcomposer.org/). Edit your project's `composer.json` file by adding:
+This package needs at least Laravel 6 and PHP 7.2.
 
-### Requirements
+To get the latest version, simply require the library using [Composer](http://getcomposer.org/).
 
-This package needs at least Laravel 5.2 and PHP 7.1.
-
-### Install
-
-First, you'll need to install the package via Composer:
-
-```shell
+```bash
 $ composer require darthsoup/laravel-theme
-```
-
-### After Laravel 5.5
-
-You do not need to do anything else here
-
-### Before Laravel 5.5
-
-Then, update `config/app.php` by adding an entry for the service provider.
-
-```php
-'providers' => [
-    // ...
-    DarthSoup\Theme\ThemeServiceProvider::class,
-];
-```
-
-If you want to access the Theme via Facade than add a new line to the `aliases` array
-
-```php
-'aliases' => [
-    // ...
-    'Theme' => DarthSoup\Theme\Facades\Theme::class,
-];
 ```
 
 ## Usage
 
 WIP
 
-## Contributions
+## Support
 
-Please use [Github](https://github.com/darthsoup/laravel-theme) for reporting bugs, and making comments or suggestions.
-See [CONTRIBUTING.md](CONTRIBUTING.md) for how to contribute changes.
+[Please open an issue in github](https://github.com/darthsoup/laravel-theme/issues)
+
+
+## License
+
+This package is released under the MIT License. See the bundled
+[LICENSE](https://github.com/darthsoup/laravel-theme/blob/master/LICENSE.md) file for details.
